@@ -1,0 +1,133 @@
+// So I can reuse this whenever I want to hide something
+@mixin visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.primary-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  min-height: var(--header-height);
+  width: 100%;
+  padding: 1rem 0;
+  background-color: var(--clr-base);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .logo span {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  .nav-list {
+    position: absolute;
+    z-index: 10;
+    top: calc(100% + 1px);
+    right: 0;
+    height: 100vh;
+    width: 70vw;
+    max-width: 20rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    font-weight: var(--fw-700);
+    background-color: var(--clr-hero);
+    padding: 2rem;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
+
+    // Animation
+    transition: transform var(--animation-450);
+    transform: translateX(100%);
+
+    @media (min-width: 50em) {
+      position: static;
+      max-width: none;
+      flex-direction: row;
+      padding: unset;
+      height: auto;
+      width: auto;
+      transform: translateX(0);
+      background-color: var(--clr-base);
+      box-shadow: none;
+    }
+  }
+
+  .nav-list.show {
+    transform: translateX(0);
+  }
+
+  .nav-link {
+    cursor: pointer;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--clr-grey-200);
+    // Animation
+    transition: color var(--animation-350);
+
+    &:hover {
+      color: var(--clr-secondary-dark);
+    }
+
+    @media (min-width: 50em) {
+      // why doesnt padding use the border down?
+      // padding-bottom: 2rem;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+  }
+
+  .overlay {
+    position: absolute;
+    z-index: -1;
+    top: calc(100% + 1px);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--clr-secondary-light);
+    opacity: 0.3;
+
+    // Animation
+    transform: translateX(100%);
+    // transition: transform var(--animation-350);
+
+    @media (min-width: 50em) {
+      @include visually-hidden;
+    }
+  }
+
+  .overlay.show {
+    transform: translateX(0);
+  }
+
+  .toggle-menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    @media (min-width: 50em) {
+      @include visually-hidden;
+    }
+  }
+}

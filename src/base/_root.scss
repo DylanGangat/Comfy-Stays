@@ -1,0 +1,67 @@
+:root {
+  // colours
+
+  --clr-primary: hsl(0, 0%, 6%);
+  --clr-primary-2: hsl(34, 4%, 32%);
+
+  --clr-secondary-light: hsl(171, 65%, 36%);
+  --clr-secondary-dark: hsl(176, 46%, 18%);
+
+  --clr-accent: hsl(23, 74%, 94%);
+  --clr-base: hsl(0, 0%, 100%);
+
+  --clr-hero: hsl(60, 4%, 95%);
+
+  --clr-grey-200: hsl(0, 6%, 90%);
+  --clr-grey-400: hsl(249, 20%, 93%);
+  --clr-grey-600: hsl(213, 4%, 40%);
+
+  --clr-red-300: hsl(0, 100%, 89%);
+  --clr-red-900: hsl(0, 65%, 48%);
+
+  --clr-green-300: hsl(128, 71%, 82%);
+  --clr-green-900: hsl(132, 52%, 35%);
+
+  // font family
+
+  --ff-primary: "DM Sans", sans-serif;
+
+  // font size
+  --fs-200: 0.8125rem;
+  --fs-300: 0.9375rem; // btn
+  --fs-400: 1rem; // p
+  --fs-500: 1.333rem; // subtitle  + questionDefault
+  --fs-600: 1.777rem; // sub heading
+  --fs-700: 2.369rem; // section title
+  --fs-800: 3.157rem; // main heading
+
+  @media (min-width: 50em) {
+    --fs-300: 0.9375rem; // btn
+    --fs-400: 1rem; // p
+    --fs-500: 1.56rem; // subtitle  + question
+    --fs-600: 2.25rem; // sub heading
+    --fs-700: 3.1875rem; // section title
+    --fs-800: 4rem; // main heading 5.94rem
+  }
+
+  // font weight
+
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-700: 700;
+
+  // border radius
+
+  --border-radius: 10px;
+
+  // headers min height
+
+  --header-height: 4.5rem;
+  --fixed-nav-spacer: var(--header-height);
+
+  // animation
+
+  --animation-350: 350ms ease-in;
+  --animation-450: 450ms ease-in;
+  --animation-750: 750ms ease-in;
+}
