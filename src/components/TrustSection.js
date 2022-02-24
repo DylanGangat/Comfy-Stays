@@ -1,29 +1,21 @@
 // Styles
-import './TrustSection.scss'
+import "./TrustSection.scss";
+
+// Cards data
+import { cards } from "../data/data";
+import TrustCard from "./TrustCard";
 
 export default function TrustSection() {
   return (
-    <section>
+    <section className="trust bg-dark center">
+      <div className="container">
         <h2>Why trust us?</h2>
-        <div>
-            <div>
-                <img src="" alt="" />
-                <h3></h3>
-                <p></p>
-            </div>
-
-            <div>
-                <img src="" alt="" />
-                <h3></h3>
-                <p></p>
-            </div>
-
-            <div>
-                <img src="" alt="" />
-                <h3></h3>
-                <p></p>
-            </div>
+        <div className="grid spacer">
+          {cards.map(card => (
+            <TrustCard key={card.id} card={card} />
+          ))}
         </div>
+      </div>
     </section>
-  )
+  );
 }

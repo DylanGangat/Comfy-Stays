@@ -2,10 +2,10 @@
   // colours
 
   --clr-primary: hsl(0, 0%, 6%);
-  --clr-primary-2: hsl(34, 4%, 32%);
+  --clr-primary-2: #55524e;
 
   --clr-secondary-light: hsl(171, 65%, 36%);
-  --clr-secondary-dark: hsl(176, 46%, 18%);
+  --clr-secondary-dark: #194340;
 
   --clr-accent: hsl(23, 74%, 94%);
   --clr-base: hsl(0, 0%, 100%);
@@ -14,7 +14,7 @@
 
   --clr-grey-200: hsl(0, 6%, 90%);
   --clr-grey-400: hsl(249, 20%, 93%);
-  --clr-grey-600: hsl(213, 4%, 40%);
+  --clr-grey-600: hsl(210, 4%, 40%);
 
   --clr-red-300: hsl(0, 100%, 89%);
   --clr-red-900: hsl(0, 65%, 48%);
@@ -30,7 +30,7 @@
   --fs-200: 0.8125rem;
   --fs-300: 0.9375rem; // btn
   --fs-400: 1rem; // p
-  --fs-500: 1.333rem; // subtitle  + questionDefault
+  --fs-500: 1.333rem; // subtitle
   --fs-600: 1.777rem; // sub heading
   --fs-700: 2.369rem; // section title
   --fs-800: 3.157rem; // main heading
@@ -38,7 +38,7 @@
   @media (min-width: 50em) {
     --fs-300: 0.9375rem; // btn
     --fs-400: 1rem; // p
-    --fs-500: 1.56rem; // subtitle  + question
+    --fs-500: 1.56rem; // subtitle
     --fs-600: 2.25rem; // sub heading
     --fs-700: 3.1875rem; // section title
     --fs-800: 4rem; // main heading 5.94rem
