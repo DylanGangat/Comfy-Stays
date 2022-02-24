@@ -33,8 +33,10 @@ h4,
 .hero-title {
   --fs-800: 1.333rem;
   font-size: var(--fs-800);
-  
+  line-height: 1.3;
+
   @media (min-width: 50em) {
     --fs-800: 2.5rem;
+    line-height: 1;
   }
 }

@@ -1,0 +1,73 @@
+.rental-search-form {
+  --spacer: 1.25rem;
+  padding: 2rem;
+
+  background-color: var(--clr-base);
+  border-radius: var(--border-radius);
+  max-width: 25rem;
+  box-shadow: rgba(54, 90, 125, 0.05) 0px 24px 50px 0px;
+
+  form > * {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    font-size: var(--fs-200);
+    font-weight: var(--fw-500);
+  }
+
+  input {
+    width: 100%;
+    color: inherit;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    border: 1px solid var(--clr-grey-200);
+    border-radius: var(--border-radius);
+  }
+
+  .stay-details,
+  .stay-log {
+    flex-direction: column;
+    gap: 0.5rem;
+
+    @media (min-width: 50em) {
+      flex-direction: row;
+    }
+  }
+
+  .stay-details > *,
+  .stay-log > * {
+    width: 100%;
+  }
+
+  ::placeholder {
+    color: var(--clr-grey-600);
+  }
+
+  input[type="date"] {
+    color: var(--clr-grey-600);
+  }
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  width: 100%;
+  font-size: var(--fs-300);
+  font-weight: var(--fw-700);
+  letter-spacing: 0.8px;
+  padding: 0.81em 1.56em;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  color: var(--bg, var(--clr-base));
+  background-color: var(--accent, var(--clr-secondary-dark));
+  transition: background-color var(--animation-350);
+
+  &:hover,
+  &:focus {
+    background-color: var(--fg, var(--clr-secondary-light));
+  }
+}

@@ -1,4 +1,50 @@
 .hero {
   margin-top: var(--fixed-nav-spacer);
   background-color: var(--clr-hero);
+
+  // So the form wont look too narrow
+  @media (max-width: 25em) {
+    --container-padding: 0rem;
+  }
+
+  // Grid
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--grid-spacer, 2rem);
+    align-items: center;
+    justify-items: center;
+
+    @media (min-width: 50em) {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--grid-spacer, 4rem);
+    }
+
+    @media (min-width: 62.5em) {
+      grid-template-columns: 25rem 1fr;
+    }
+  }
+
+  .hero-image {
+    width: 100%;
+  }
+
+  .sponsor {
+    margin-top: 1rem;
+
+    @media (max-width: 25em) {
+      padding: 0 2rem;
+    }
+  }
+
+  .sponsor span {
+    font-size: var(--fs-200);
+    font-weight: var(--fw-500);
+    color: var(--clr-grey-600);
+  }
+
+  .sponsor img {
+    margin-top: 0.5rem;
+  }
 }
