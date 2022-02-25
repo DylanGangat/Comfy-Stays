@@ -76,6 +76,12 @@ section {
   --accent: var(--clr-accent);
 }
 
+.bg-accent {
+  --fg: var(--clr-primary);
+  --bg: var(--clr-accent);
+  --accent: var(--clr-secondary-dark);
+}
+
 // To hide content from the page but be visible for screen readers
 
 .visually-hidden {

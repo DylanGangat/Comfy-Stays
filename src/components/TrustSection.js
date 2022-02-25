@@ -3,6 +3,8 @@ import "./TrustSection.scss";
 
 // Cards data
 import { cards } from "../data/data";
+
+// Components
 import TrustCard from "./TrustCard";
 
 export default function TrustSection() {

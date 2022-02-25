@@ -1,0 +1,13 @@
+.reviews {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--grid-spacer, 2rem);
+    align-items: center;
+
+    @media (min-width: 50em) {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--grid-spacer, 4rem);
+    }
+  }
+}

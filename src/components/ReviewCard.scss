@@ -1,0 +1,52 @@
+.review-card {
+  .quote {
+    color: var(--clr-primary-2);
+    font-weight: var(--fw-700);
+    position: relative;
+  }
+
+  .quote-icon {
+    color: var(--clr-primary-2);
+  }
+
+  .reviewer-profile {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+
+  .reviewer-image {
+    height: 3rem;
+    width: 3rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 0.5px solid var(--clr-primary-2);
+  }
+
+  .reviewer-details h3,
+  .reviewer-details p {
+    font-size: var(--fs-200);
+    font-weight: var(--fw-500);
+  }
+
+  .reviewer-details p {
+    margin-top: 0.25em;
+    color: var(--clr-primary-2);
+  }
+
+  .arrows {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    cursor: pointer;
+  }
+
+  .arrow {
+    color: var(--clr-primary-2);
+    transition: color var(--animation-350);
+  }
+
+  .arrow:hover {
+    color: var(--clr-secondary-dark);
+  }
+}

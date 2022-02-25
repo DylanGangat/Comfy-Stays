@@ -1,7 +1,7 @@
 .trust {
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     gap: var(--grid-spacer, 2rem);
   }
 }
