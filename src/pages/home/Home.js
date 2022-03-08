@@ -3,17 +3,21 @@ import "./Home.scss";
 
 // Components
 import Hero from "../../components/Hero";
-import TrustSection from "../../components/TrustSection";
-import ReviewSection from "../../components/ReviewSection";
+import SectionTrust from "../../components/SectionTrust";
+import SectionReview from "../../components/SectionReview";
+import SectionProperty from "../../components/SectionProperty";
 
 export default function Home() {
+  // Main section where you should pass props from and remember you should NOT PROP DRILL!
   return (
     <>
       <Hero />
 
-      <TrustSection />
+      <SectionTrust />
 
-      <ReviewSection />
+      <SectionReview />
+
+      <SectionProperty />
     </>
   );
 }

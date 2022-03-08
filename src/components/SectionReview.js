@@ -1,14 +1,11 @@
 // Styles
-import "./ReviewSection.scss";
+import "./SectionReview.scss";
 
 // Images
 import ReviewImage from "../assets/review.png";
 
 // Components
-import ReviewCard from "./ReviewCard";
-
-// Data
-// import { reviews } from "../data/data";
+import CardReview from "./CardReview";
 
 export default function ReviewSection() {
   return (
@@ -17,10 +14,8 @@ export default function ReviewSection() {
         <div>
           <h2>People say about us</h2>
           <div className="spacer">
-            {/* {reviews.map(review => (
-              <ReviewCard key={review.id} review={review} reviews={reviews}/>
-            ))} */}
-            <ReviewCard />
+            {/* Gets the review card component */}
+            <CardReview />
           </div>
         </div>
         <figure>

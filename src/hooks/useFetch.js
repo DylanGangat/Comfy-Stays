@@ -7,18 +7,26 @@ export const useFetch = url => {
 
   useEffect(() => {
     const controller = new AbortController();
-    const FetchData = async () => {
+    const fetchData = async () => {
       setIsPending(true);
 
       try {
         const response = await fetch(url, {
           signal: controller.signal,
+          method: "GET",
+          headers: {
+            "x-rapidapi-host": "booking-com.p.rapidapi.com",
+            "x-rapidapi-key":
+              "a2bab0e7f1mshba65b16d9bca6a4p1fb290jsncdb7eb0d8f34",
+          },
         });
         if (!response.ok) throw new Error(response.statusText);
         const data = await response.json();
 
         setIsPending(false);
-        setData(data);
+        // I had to take the data and move to the data that I needed which is in the result object and the just take 3 of the hotels to display.
+        const hotels = data.result.slice(0, 3);
+        setData(hotels);
         setError(null);
       } catch (error) {
         if (error.name === "AbortError") {
@@ -29,7 +37,7 @@ export const useFetch = url => {
         }
       }
     };
-    FetchData();
+    fetchData();
     return () => {
       controller.abort();
     };
