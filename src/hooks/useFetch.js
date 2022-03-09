@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 export const useFetch = url => {
   const [data, setData] = useState(null);
+  const [hotels, setHotels] = useState(null);
   const [isPending, setIsPending] = useState(false);
   const [error, setError] = useState(null);
 
@@ -26,7 +27,10 @@ export const useFetch = url => {
         setIsPending(false);
         // I had to take the data and move to the data that I needed which is in the result object and the just take 3 of the hotels to display.
         const hotels = data.result.slice(0, 3);
-        setData(hotels);
+        // It stores the default data
+        setData(data);
+        // This state stores the 3 hotels that will be used which I stored in the hotels variable that I pass through as a argument and update the hotels state.
+        setHotels(hotels);
         setError(null);
       } catch (error) {
         if (error.name === "AbortError") {
@@ -43,5 +47,5 @@ export const useFetch = url => {
     };
   }, [url]);
 
-  return { data, isPending, error };
+  return { data, hotels, isPending, error };
 };

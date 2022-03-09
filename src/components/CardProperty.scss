@@ -1,6 +1,7 @@
 .property-card {
   // To get the title and price closer together because it was clashing with the layout because padding around the details is 1rem and by default my flow-space is 1rem too.
   --flow-spacer: 0.5rem;
+  --subtitle: 1.25rem;
 
   .image-container {
     // The images I am fetching is very big so I want to limit their size.
@@ -15,19 +16,24 @@
   }
 
   .details {
-    padding: 1rem;
+    padding: 1rem 0.5rem;
   }
 
   .header {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
   }
+
+  // .subtitle {
+  //   max-width: 12ch;
+  // }
 
   .rating {
     display: flex;
     align-items: center;
     color: var(--clr-accent);
+    margin-left: 1rem;
   }
 
   .rating .star-icon {

@@ -40,7 +40,7 @@ export const cards = [
 export const reviews = [
   {
     quote:
-      "Cozy Homes prices are low compared to other travel agencies websites. The hotel reviews are of visitors from all over the world traveling, taking vacation, sharing their opinions and experience. I never had aproblem using them.",
+      "Cozy Homes prices are low compared to other travel agencies websites. The hotel reviews are of visitors from all over the world traveling, taking vacation, sharing their opinions and experience. I never had a problem using them.",
     name: "Lisa",
     location: "From Cape Town, SA",
     image: ReviewerOne,
