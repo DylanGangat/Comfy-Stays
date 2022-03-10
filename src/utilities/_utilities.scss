@@ -17,6 +17,30 @@ section {
   max-width: var(--max-width, 74.75rem);
 }
 
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  width: 100%;
+  font-size: var(--fs-300);
+  font-weight: var(--fw-700);
+  letter-spacing: 0.8px;
+  padding: 0.81em 1.56em;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  color: var(--bg, var(--clr-base));
+  background-color: var(--accent, var(--clr-secondary-dark));
+  transition: background-color var(--animation-350);
+
+  &:hover,
+  &:focus {
+    background-color: var(--fg, var(--clr-secondary-light));
+  }
+}
+
 .flow-content > * + * {
   margin-top: var(--flow-spacer, 1rem);
 }

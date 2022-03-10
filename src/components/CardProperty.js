@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 export default function CardProperty({
-  // destructured the hotel prop and then destructured the hotels info that I needed.
+  // Destructured the hotel prop and then destructured the hotels info that I needed.
   hotel: {
     max_1440_photo_url,
     hotel_name,

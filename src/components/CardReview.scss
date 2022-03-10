@@ -12,7 +12,18 @@
   .reviewer-profile {
     display: flex;
     align-items: center;
-    gap: 1em;
+
+    // Supports gap with flex
+    @supports (gap: 1em) and (display: flex) {
+      gap: 1rem;
+    }
+
+    // Doesn't Support gap with flex
+    @supports not (gap: 1em) {
+      > * + * {
+        margin: 0 0 0 1rem;
+      }
+    }
   }
 
   .reviewer-image {
@@ -37,16 +48,32 @@
   .arrows {
     display: flex;
     align-items: center;
-    gap: 1em;
     cursor: pointer;
+
+    // Supports gap with flex
+    @supports (gap: 1em) and (display: flex) {
+      gap: 1rem;
+    }
+
+    // Doesn't Support gap with flex
+    @supports not (gap: 1em) {
+      > * + * {
+        margin: 0 0 0 1rem;
+      }
+    }
   }
+
+  // .arrows > * + * {
+  //   margin-left: 1rem;
+  // }
 
   .arrow {
     color: var(--clr-primary-2);
     transition: color var(--animation-350);
   }
 
-  .arrow:hover {
+  .arrow:hover,
+  .arrow:focus {
     color: var(--clr-secondary-dark);
   }
 }
