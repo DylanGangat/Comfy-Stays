@@ -19,7 +19,6 @@
 
   input {
     width: 100%;
-    color: inherit;
     padding: 0.5rem;
     margin-top: 0.25rem;
     border: 1px solid var(--clr-grey-200);
@@ -47,5 +46,9 @@
 
   input[type="date"] {
     color: var(--clr-grey-600);
+  }
+
+  .btn {
+    margin-top: 1.5rem;
   }
 }

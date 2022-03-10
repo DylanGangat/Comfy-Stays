@@ -1,8 +1,10 @@
 .review-card {
   .quote {
+    // Relative for the quote icon
+    position: relative;
     color: var(--clr-primary-2);
     font-weight: var(--fw-700);
-    position: relative;
+    max-width: 45ch;
   }
 
   .quote-icon {
@@ -12,18 +14,10 @@
   .reviewer-profile {
     display: flex;
     align-items: center;
+  }
 
-    // Supports gap with flex
-    @supports (gap: 1em) and (display: flex) {
-      gap: 1rem;
-    }
-
-    // Doesn't Support gap with flex
-    @supports not (gap: 1em) {
-      > * + * {
-        margin: 0 0 0 1rem;
-      }
-    }
+  .reviewer-profile > * + * {
+    margin: 0 0 0 1rem;
   }
 
   .reviewer-image {
@@ -49,23 +43,11 @@
     display: flex;
     align-items: center;
     cursor: pointer;
-
-    // Supports gap with flex
-    @supports (gap: 1em) and (display: flex) {
-      gap: 1rem;
-    }
-
-    // Doesn't Support gap with flex
-    @supports not (gap: 1em) {
-      > * + * {
-        margin: 0 0 0 1rem;
-      }
-    }
   }
 
-  // .arrows > * + * {
-  //   margin-left: 1rem;
-  // }
+  .arrows > * + * {
+    margin-left: 1rem;
+  }
 
   .arrow {
     color: var(--clr-primary-2);

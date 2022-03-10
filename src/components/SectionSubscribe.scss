@@ -1,0 +1,60 @@
+.subscribe {
+  --spacer: 4rem;
+
+  @media (min-width: 50em) {
+    --spacer: 6rem;
+  }
+
+  .email-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 1rem;
+
+    max-width: 35rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    .input {
+      width: 100%;
+      // flex: flex grow / flex shrink / flex-basis
+      flex: 3 1 24rem;
+    }
+
+    input {
+      padding: 0.81em 1.56em;
+      width: 100%;
+      border-radius: var(--border-radius);
+      border: none;
+      background-color: var(--clr-hero);
+      text-align: center;
+
+      @media (min-width: 50em) {
+        text-align: left;
+      }
+    }
+
+    input::placeholder {
+      color: var(--clr-grey-600);
+    }
+
+    .error,
+    .success {
+      margin-top: 0.25rem;
+    }
+    .error {
+      color: var(--error);
+    }
+
+    .success {
+      color: var(--success);
+    }
+
+    .btn {
+      // flex: flex grow / flex shrink / flex-basis
+      flex: 1 1 10rem;
+    }
+  }
+
+  // End of the subscribe selector
+}

@@ -59,19 +59,11 @@
     transition: transform var(--animation-450);
     transform: translateX(100%);
 
-    // Supports gap with flex
-    @supports (gap: 1em) and (display: flex) {
-      gap: 1rem;
-    }
+    > * + * {
+      margin: 1rem 0 0 0;
 
-    // Doesn't Support gap with flex
-    @supports not (gap: 1em) {
-      > * + * {
-        margin: 1rem 0 0 0;
-
-        @media (min-width: 50em) {
-          margin: 0 0 0 1rem;
-        }
+      @media (min-width: 50em) {
+        margin: 0 0 0 1rem;
       }
     }
 
@@ -99,7 +91,8 @@
     // Animation
     transition: color var(--animation-350);
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: var(--clr-secondary-dark);
     }
 
@@ -123,7 +116,6 @@
 
     // Animation
     transform: translateX(100%);
-    // transition: transform var(--animation-350);
 
     @media (min-width: 50em) {
       @include visually-hidden;
@@ -138,6 +130,14 @@
     background: none;
     border: none;
     cursor: pointer;
+
+    // Animation
+    transition: color var(--animation-350);
+
+    &:hover,
+    &:focus {
+      color: var(--clr-secondary-dark);
+    }
 
     @media (min-width: 50em) {
       @include visually-hidden;

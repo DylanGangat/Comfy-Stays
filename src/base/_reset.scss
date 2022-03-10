@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 
 // Box sizing rules
 
@@ -59,6 +59,7 @@ button,
 textarea,
 select {
   font: inherit;
+  color: inherit;
 }
 
 // Set core body defaults
