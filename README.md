@@ -1,4 +1,4 @@
-# Cozy-Homes
+# Cozy Homes
 
 ## Screenshot 📷
 
