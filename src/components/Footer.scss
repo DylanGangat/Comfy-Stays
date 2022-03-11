@@ -1,12 +1,11 @@
 .footer {
+  --section-padding: 2rem;
   text-align: center;
 
   .grid {
     display: flex;
     align-items: center;
     flex-direction: column;
-    border-bottom: 1px solid var(--clr-base);
-    padding-bottom: 1.5rem;
 
     @media (min-width: 50em) {
       flex-direction: row;
