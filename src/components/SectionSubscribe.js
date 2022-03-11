@@ -1,6 +1,11 @@
 // Styles
-import { useState } from "react";
 import "./SectionSubscribe.scss";
+
+import { useState } from "react";
+
+// Photo
+
+import SubImage from "../assets/subscribe.svg";
 
 export default function SectionSubscribe() {
   const [email, setEmail] = useState("");
@@ -40,7 +45,13 @@ export default function SectionSubscribe() {
 
         {/* Removed the default validation so I could add mine */}
 
-        <form className="email-form spacer" onSubmit={handleSubmit} noValidate>
+        <img
+          className="image"
+          src={SubImage}
+          alt="A illustration of a lady sitting"
+        />
+
+        <form className="email-form" onSubmit={handleSubmit} noValidate>
           <div className="input">
             <label htmlFor="email" className="visually-hidden">
               Enter yor email:
@@ -66,7 +77,6 @@ export default function SectionSubscribe() {
               </p>
             )}
           </div>
-
           <button className="btn" type="submit">
             Subscribe
           </button>

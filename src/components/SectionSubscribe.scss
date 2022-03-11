@@ -1,8 +1,7 @@
 .subscribe {
-  --spacer: 4rem;
-
-  @media (min-width: 50em) {
-    --spacer: 6rem;
+  .image {
+    max-height: 25rem;
+    margin: 0 auto;
   }
 
   .email-form {
@@ -10,7 +9,6 @@
     flex-wrap: wrap;
     align-items: flex-start;
     gap: 1rem;
-
     max-width: 35rem;
     margin-left: auto;
     margin-right: auto;
