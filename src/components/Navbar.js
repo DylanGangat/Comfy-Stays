@@ -19,12 +19,12 @@ export default function Navbar() {
       <div className="container">
         <nav className="main-nav">
           <Link to="/">
-            <h4 className="logo">
+            <div className="logo">
               <span>
                 <img src={HouseIcon} alt="house icon" />
               </span>
               Cozy Homes
-            </h4>
+            </div>
           </Link>
 
           {/* Nav List */}

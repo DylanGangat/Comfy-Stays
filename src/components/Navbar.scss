@@ -31,6 +31,12 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    font-size: var(--fs-400);
+    font-weight: var(--fw-700);
+
+    @media (min-width: 50em) {
+      font-size: var(--fs-500);
+    }
   }
 
   .logo span {

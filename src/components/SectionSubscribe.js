@@ -28,7 +28,7 @@ export default function SectionSubscribe() {
       setError(true);
     }
 
-    //Reset the entire validation after 2 secs
+    //Reset the entire validation after 1 secs
     setTimeout(() => {
       resetValidation();
     }, 1000);
