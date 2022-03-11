@@ -1,6 +1,6 @@
 # Cozy Homes
 
-## Screenshot 📷
+## Screenshots 📷
 
 Mobile Design
 
