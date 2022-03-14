@@ -28,7 +28,7 @@ export default function CardProperty({
             <FontAwesomeIcon icon={faStar} className="star-icon" />
           </div>
         </div>
-        <p className="price">{`${min_total_price} ${currency_code}`}</p>
+        <p className="price">{`${min_total_price.toFixed(0)} ${currency_code}`}</p>
       </div>
     </div>
   );

@@ -17,7 +17,7 @@ export default function SectionProperty() {
   return (
     <section className="properties bg-dark">
       <div className="container">
-        <h2 className="center">Homes loved by guests </h2>
+        <h2 className="center">Loved by guests</h2>
         <div className="grid spacer">
           {error && <p>{error}</p>}
           {isPending && <p>Is Loading...</p>}
